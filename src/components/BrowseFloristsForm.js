@@ -10,6 +10,13 @@ class BrowseFloristsForm extends React.Component {
         event.preventDefault()
         this.props.ListFlorists(this.state)  
     }
+
+    //Update state as user enters zipcode in the form:
+    onChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
    
     render () {
         return (     
@@ -17,7 +24,7 @@ class BrowseFloristsForm extends React.Component {
             <form onSubmit={ this.handleSubmit }>
                 <h3>Enter zipcode to browse florists:</h3>
                 <div>
-                    <input placeholder="zipcode" type="text" name="zipcode"/>
+                    <input placeholder="zipcode" type="text" name="zipcode" onChange={this.onChange}/>
                     <input type="submit" value="Browse"/>
                 </div>
             </form>
