@@ -1,20 +1,16 @@
 import React from 'react'
+import ListFlorists from './ListFlorists';
 
 class BrowseFloristsForm extends React.Component {
     state = {
         zipcode: ''
     }
 
-    // handleSubmit = event => {
-    //     event.preventDefault()
-    //     this.props.fetchSchools(this.state)  
-    // }
+    handleSubmit = event => {
+        event.preventDefault()
+        this.props.ListFlorists(this.state)  
+    }
    
-    // onChange = (event) => {
-    //     this.setState({
-    //       [event.target.name]: event.target.value
-    //     })
-    // }
     render () {
         return (     
             <>  
@@ -25,7 +21,7 @@ class BrowseFloristsForm extends React.Component {
                     <input type="submit" value="Browse"/>
                 </div>
             </form>
-            {/* <ListSchools /> */}
+            <ListFlorists/>
             </>
         )   
     }   
