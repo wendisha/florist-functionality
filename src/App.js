@@ -23,8 +23,9 @@ function App() {
       // </header>
     // </div>
     <div>
-    <BrowseFloristsForm/>
-    <FloristListContainer/>
+          <FloristListContainer/>
+    {/* <BrowseFloristsForm/> */}
+
     </div>
   );
 }
