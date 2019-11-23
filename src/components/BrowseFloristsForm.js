@@ -1,14 +1,30 @@
 import React from 'react'
-import ListFlorists from './ListFlorists';
+// import ListFlorists from './ListFlorists';
+// import FloristListContainer from '../container/FloristListContainer'
 
 class BrowseFloristsForm extends React.Component {
-    state = {
-        zipcode: ''
-    }
+    // state = {
+    //     zipcode: ''
+    // }
+
+
+    constructor(props) {
+        super(props)
+        this.state = {
+          zipcode: ""
+        }
+      }
+    
+    //   handleSubmit = (e) => {
+    //     e.preventDefault()
+    //     this.props.fetch(this.state.query)
+    //   }
+
 
     handleSubmit = event => {
+        // console.log(this.state.zipcode);
         event.preventDefault()
-        this.props.ListFlorists(this.state)  
+        this.props.fetchYelpApi(this.state.zipcode)  
     }
 
     //Update state as user enters zipcode in the form:
@@ -28,7 +44,7 @@ class BrowseFloristsForm extends React.Component {
                     <input type="submit" value="Browse"/>
                 </div>
             </form>
-            <ListFlorists/>
+            {/* <ListFlorists/> */}
             </>
         )   
     }   
