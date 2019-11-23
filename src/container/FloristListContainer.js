@@ -12,7 +12,7 @@ class FloristListContainer extends Component {
     }
 
     fetchYelpApi = (zipcode) => {
-        console.log('Helloooooooooo');
+        // console.log(zipcode);
         const proxyurl = "https://cors-anywhere.herokuapp.com/"
         let url = `https://api.yelp.com/v3/businesses/search?term=florist&location=${zipcode}&limit=20`
         fetch(proxyurl + url, {
@@ -25,14 +25,18 @@ class FloristListContainer extends Component {
                 }
             )
         .then(resp => resp.json())
-        .then(({data}) => {
+        .then((data) => {
+            // console.log(data.businesses)
             let florists = []
-            data.map((florist) => (
+            data.businesses.map((florist) => (
                 florists.push(florist)
             ))
             this.setState({
+
                 floristsList : florists
+                
             })
+            console.log(this.state)
         })
     }
 
