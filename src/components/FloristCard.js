@@ -1,9 +1,6 @@
 import React from 'react'
-// import { connect } from 'react-redux';
-// import { addSchoolToBookmarks } from '../actions/myBookmarks'
 
 const FloristCard = (props) => {
-
   return ( 
     <div>
     <div key={props.florist.id}>
@@ -19,12 +16,3 @@ const FloristCard = (props) => {
 }
 
 export default FloristCard
-// const mapStateToProps = state => {
-//   const userId = state.currentUser ? state.currentUser.id : ""
-//   return {
-//       schoolInfo: state.browseSchoolsForm,
-//       userId
-//   }
-// }
-
-// export default connect(mapStateToProps, {addSchoolToBookmarks})(SchoolCard);
