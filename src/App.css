@@ -16,7 +16,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+/* 
 .App-link {
   color: #09d3ac;
 }
@@ -28,3 +28,32 @@
 .font-body {
   font-family: Montserrat;
 }
+
+.max-w-xs {
+  max-width: 200rem;
+}
+
+.leading-snug {
+  line-height: 1.375;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.bg-gradiant {
+  background: linear-gradient(110deg,#cee8e1 60%,#3e9591 0);
+} */
