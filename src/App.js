@@ -1,7 +1,6 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import BrowseFloristsForm from './components/BrowseFloristsForm';
 import FloristListContainer from './container/FloristListContainer';
 
 function App() {
@@ -24,8 +23,6 @@ function App() {
     // </div>
     <div>
           <FloristListContainer/>
-    {/* <BrowseFloristsForm/> */}
-
     </div>
   );
 }
