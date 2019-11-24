@@ -1,10 +1,22 @@
 import React from 'react'
 
-class BrowseFloristsForm extends React.Component {
-    state = {
-        zipcode: ''
-    }
+const initialState = {
+    zipcode: ''
+};
 
+class BrowseFloristsForm extends React.Component {
+    // state = {
+    //     zipcode: ''
+    // }
+
+    constructor() {
+        super()
+        this.state = initialState;
+    }
+    reset() {
+        this.setState(initialState);
+    }
+ 
     handleSubmit = event => {
         event.preventDefault()
         this.props.fetchYelpApi(this.state.zipcode)  

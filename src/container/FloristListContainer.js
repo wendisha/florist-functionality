@@ -3,10 +3,24 @@ import BrowseFloristsForm from '../components/BrowseFloristsForm'
 import ListFlorists from '../components/ListFlorists'
 import Geolocate from '../components/Geolocate';
 
+// const initialState = {
+//     floristsList : []
+// };
+
 class FloristListContainer extends Component {
     state = {
         floristsList : []
     }
+
+    // constructor(props) {
+    //     super(props)
+    //     this.state = initialState;
+    // }
+    // reset() {
+    //     this.setState(initialState);
+    // }
+
+
 
     componentDidMount() {
         this.fetchYelpApi()
