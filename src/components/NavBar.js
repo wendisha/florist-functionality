@@ -15,7 +15,7 @@ const NavBar = () => {
                     <Nav.Link href="https://www.lantern.co/howitworks" style={{ color: '#000', paddingRight: '50px' }}>How it works</Nav.Link>
                     <Nav.Link href="https://www.lantern.co/articles" style={{ color: '#000', paddingRight: '50px' }}>Articles</Nav.Link>
                     <Nav.Link href="https://www.lantern.co/login" style={{ color: '#000', paddingRight: '50px' }}>Log In</Nav.Link>
-                    <Button variant="warning" href="https://www.lantern.co/register/stepone">Create Account</Button>
+                    <Button variant="warning" className='btn-lg round' href="https://www.lantern.co/register/stepone">Create Account</Button>
                 </Nav>
             </div>
         </Navbar>
