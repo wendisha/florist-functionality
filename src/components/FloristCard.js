@@ -1,17 +1,22 @@
 import React from 'react'
+import CardDeck from "react-bootstrap/CardDeck";
+import Card from 'react-bootstrap/Card';
 
 const FloristCard = (props) => {
   return ( 
-    <div>
-    <div key={props.florist.id}>
-      <h1>{props.florist.name}</h1>
-      {/* <h3>{`Rating: ${school.rating}`}</h3> */}
-      {/* <p>{school.location.city}, {school.location.state}  |  {school.phone} </p> */}
-      <img className='img-size' src={props.florist.image_url} alt={`Florist: ${props.florist.name}`}/><br/><br/>
-      <a target="_blank" href={props.florist.url}>Learn more about this florist!</a><br/><br/>
-      {/* <button className="btn btn-info" onClick={handleClick}> Bookmark </button> */}
-    </div>
-    </div>
+    <CardDeck className="col-md-6 col-lg-4">
+      <Card>
+      {/* <div key={props.florist.id}> */}
+        <Card.Img variant="top" src={props.florist.image_url} alt={`Florist: ${props.florist.name}`}/>
+        <Card.Body>
+          <Card.Title>{props.florist.name}</Card.Title>
+          <Card.Text>{props.florist.location.address1}</Card.Text>
+          <Card.Text>{props.florist.location.city}, {props.florist.location.state}</Card.Text>
+          <Card.Text>{props.florist.display_phone}</Card.Text>
+          <Card.Link target="_blank" href={props.florist.url}>Learn more about this florist!</Card.Link>
+        </Card.Body>
+      </Card>
+    </CardDeck>
   )
 }
 
