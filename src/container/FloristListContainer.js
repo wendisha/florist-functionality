@@ -11,10 +11,19 @@ class FloristListContainer extends Component {
         this.fetchYelpApi()
     }
 
-    fetchYelpApi = (zipcode) => {
+    fetchYelpApi = (...args) => {
         // console.log(zipcode);
+        // console.log(arguments)
+        let zipcode, latitude, longitude, url;
+        if (args.length > 2) {
+          [latitude, longitude] = args;
+          url = `https://api.yelp.com/v3/businesses/search?term=florist&latitude=${latitude}&longitude=${longitude}`
+        } else {
+          [zipcode] = args;
+          url = `https://api.yelp.com/v3/businesses/search?term=florist&location=${zipcode}&limit=20`
+        }
         const proxyurl = "https://cors-anywhere.herokuapp.com/"
-        let url = `https://api.yelp.com/v3/businesses/search?term=florist&location=${zipcode}&limit=20`
+        // let url = `https://api.yelp.com/v3/businesses/search?term=florist&location=${zipcode}&limit=20`
         fetch(proxyurl + url, {
                 method: 'GET',
                 headers: {
