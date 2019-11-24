@@ -4,21 +4,7 @@ class BrowseFloristsForm extends React.Component {
     state = {
         zipcode: ''
     }
-    // initialState = {
-    //     zipcode: ''
-    // };
 
-    // constructor() {
-    //     super()
-    //     this.state = {zipcode: ''};
-    // }
-
-    // reset() {
-    //     this.setState({
-    //     zipcode: ''
-    // });
-    // }
-    
     handleSubmit = event => {
         event.preventDefault()
         this.props.fetchYelpApi(this.state.zipcode)  
