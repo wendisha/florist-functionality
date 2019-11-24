@@ -8,10 +8,8 @@ const ListFlorists = (props) => {
     }
     
     return (  
-        <div>  
-            <ul>
-                {renderFloristsList()}
-            </ul>
+        <div className='row'>  
+            {renderFloristsList()}
         </div> 
     )
 }
