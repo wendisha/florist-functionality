@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import BrowseFloristsForm from '../components/BrowseFloristsForm'
 import ListFlorists from '../components/ListFlorists'
-import Geolocate from '../components/Geolocate';
+import Geolocate from '../components/Geolocate'
+import NavBar from '../components/NavBar'
 
 // const initialState = {
 //     floristsList : []
@@ -78,6 +79,7 @@ class FloristListContainer extends Component {
     render() {
         return ( 
             <div>
+                <NavBar/>
                 <Geolocate fetchYelpApi={this.fetchYelpApi}/>
                 <BrowseFloristsForm fetchYelpApi={this.fetchYelpApi}/>
                 <ListFlorists floristsList={this.state.floristsList}/>
