@@ -1,25 +1,30 @@
 import React from 'react'
 
-const initialState = {
-    zipcode: ''
-};
-
 class BrowseFloristsForm extends React.Component {
-    // state = {
+    state = {
+        zipcode: ''
+    }
+    // initialState = {
     //     zipcode: ''
+    // };
+
+    // constructor() {
+    //     super()
+    //     this.state = {zipcode: ''};
     // }
 
-    constructor() {
-        super()
-        this.state = initialState;
-    }
-    reset() {
-        this.setState(initialState);
-    }
- 
+    // reset() {
+    //     this.setState({
+    //     zipcode: ''
+    // });
+    // }
+    
     handleSubmit = event => {
         event.preventDefault()
         this.props.fetchYelpApi(this.state.zipcode)  
+        this.setState({
+            zipcode: ''
+        })
     }
 
     //Update state as user enters zipcode in the form:
@@ -31,7 +36,7 @@ class BrowseFloristsForm extends React.Component {
 
     render () {
         return (
-            <form onSubmit={ this.handleSubmit }>
+            <form onSubmit={this.handleSubmit}>
                 <div>
                     <input placeholder="Browse florists by zipcode" type="text" name="zipcode" onChange={this.onChange}/>
                     <input type="submit" value="Browse"/>
