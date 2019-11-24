@@ -26,6 +26,10 @@
   height: 15vw;
   object-fit: cover;
 }
+
+.bg-lightGrey {
+  background-color: #f4f5f7;
+}
 /* 
 .App-link {
   color: #09d3ac;
