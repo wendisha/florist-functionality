@@ -1,8 +1,11 @@
 import React from 'react'
+import Geolocate from './Geolocate'
 
 class BrowseFloristsForm extends React.Component {
     state = {
-        zipcode: ''
+        zipcode: '',
+        latitude: '',
+        longitude: ''
     }
 
     handleSubmit = event => {
@@ -16,9 +19,15 @@ class BrowseFloristsForm extends React.Component {
             [event.target.name]: event.target.value
         })
     }
+
+    handleClick = (event) => {
+        event.preventDefault()
+        this.props.fetchYelpApi(this.state.latitude, this.state.longitude)
+    }
    
     render () {
-        return (     
+        return (
+            <>     
             <form onSubmit={ this.handleSubmit }>
                 <h3>Enter zipcode to browse florists:</h3>
                 <div>
@@ -26,6 +35,8 @@ class BrowseFloristsForm extends React.Component {
                     <input type="submit" value="Browse"/>
                 </div>
             </form>
+            <button onSubmit={ this.handleClick }>Browse based on my location</button>
+            </>
         )   
     }   
 }
