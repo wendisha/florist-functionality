@@ -7,9 +7,11 @@ const ListFlorists = (props) => {
         return (floristCards)
     }
     
-    return (  
-        <div className='row'>  
-            {renderFloristsList()}
+    return ( 
+        <div className="florist-container">
+            <div className='row'>  
+                {renderFloristsList()}
+            </div> 
         </div> 
     )
 }
