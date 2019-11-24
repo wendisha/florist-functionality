@@ -17,7 +17,9 @@ class FloristListContainer extends Component {
     //     this.state = initialState;
     // }
     // reset() {
-    //     this.setState(initialState);
+    //     this.setState({
+    //             floristsList : []
+    //         });
     // }
 
 
@@ -25,6 +27,19 @@ class FloristListContainer extends Component {
     componentDidMount() {
         this.fetchYelpApi()
     }
+
+    // componentWillUnmount() {
+    //     clearInterval(this.state);
+    //     // this.setState({
+    //     //     floristsList : []
+    //     // })
+    //   }
+
+    // shouldComponentUpdate() {
+    //     this.setState({
+    //         floristsList: []
+    //     });
+    // }
 
     fetchYelpApi = (...args) => {
         let zipcode, latitude, longitude, url;
@@ -56,6 +71,7 @@ class FloristListContainer extends Component {
                 floristsList : florists
                 
             })
+            // this.reset()
         })
     }
 
