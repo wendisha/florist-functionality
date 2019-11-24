@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BrowseFloristsForm from '../components/BrowseFloristsForm'
 import ListFlorists from '../components/ListFlorists'
+import Geolocate from '../components/Geolocate';
 
 class FloristListContainer extends Component {
     state = {
@@ -12,8 +13,6 @@ class FloristListContainer extends Component {
     }
 
     fetchYelpApi = (...args) => {
-        // console.log(zipcode);
-        // console.log(arguments)
         let zipcode, latitude, longitude, url;
         if (args.length > 2) {
           [latitude, longitude] = args;
@@ -23,7 +22,6 @@ class FloristListContainer extends Component {
           url = `https://api.yelp.com/v3/businesses/search?term=florist&location=${zipcode}&limit=20`
         }
         const proxyurl = "https://cors-anywhere.herokuapp.com/"
-        // let url = `https://api.yelp.com/v3/businesses/search?term=florist&location=${zipcode}&limit=20`
         fetch(proxyurl + url, {
                 method: 'GET',
                 headers: {
@@ -35,7 +33,6 @@ class FloristListContainer extends Component {
             )
         .then(resp => resp.json())
         .then((data) => {
-            // console.log(data.businesses)
             let florists = []
             data.businesses.map((florist) => (
                 florists.push(florist)
@@ -45,13 +42,13 @@ class FloristListContainer extends Component {
                 floristsList : florists
                 
             })
-            console.log(this.state)
         })
     }
 
     render() {
         return ( 
             <div>
+                <Geolocate fetchYelpApi={this.fetchYelpApi}/>
                 <BrowseFloristsForm fetchYelpApi={this.fetchYelpApi}/>
                 <ListFlorists floristsList={this.state.floristsList}/>
             </div>
