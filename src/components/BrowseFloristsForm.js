@@ -30,7 +30,7 @@ class BrowseFloristsForm extends React.Component {
                 
                 <Form onSubmit={this.handleSubmit}>
                     <Form.Group>                       
-                        <input type="text" className="border border-dark" placeholder="Browse by zipcode" name="zipcode" onChange={this.onChange} />        
+                        <input type="text" className="border border-dark" placeholder="Browse by zipcode" name="zipcode" onChange={this.onChange} required />        
                         <Geolocate fetchYelpApi={this.props.fetchYelpApi}/>
                     </Form.Group>  
                     <Button variant="warning" className='btn-md round browse' type="submit" value="Browse">Browse</Button>             
