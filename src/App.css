@@ -27,6 +27,18 @@
   object-fit: cover;
 }
 
+.card {
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06);
+}
+
+.card:hover {
+  box-shadow: 0 13px 15px -1px rgba(0,0,0,.1), 0 2px 4px -1px #fbd36b;
+}
+
+.cd-text {
+  margin-bottom: 0px;
+}
+
 .bg-lightGrey {
   background-color: #f4f5f7;
 }
@@ -78,5 +90,9 @@ button.btn.btn-light.btn-arrow {
 }
 
 .card-title.h5 {
-  height: 2.8rem;
+  height: 2.4rem;
+}
+
+.browse {
+  padding-top: 10em;
 }
