@@ -16,7 +16,7 @@ const NavBar = () => {
                         <Nav.Link className="nav-link text-center" href="https://www.lantern.co/articles" >Articles</Nav.Link>
                     </span>
                     <span className="login">
-                        <Nav.Link className="nav-link text-center" href="https://www.lantern.co/login" >Log In</Nav.Link>
+                        <Nav.Link className="nav-link text-center" style={{fontWeight: 'bold'}} href="https://www.lantern.co/login" >Log In</Nav.Link>
                         <Button variant="warning" className='btn-lg round' href="https://www.lantern.co/register/stepone">Create Account</Button>
                     </span>
                 </Nav>
