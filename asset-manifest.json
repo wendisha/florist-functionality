@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/wendisha/florist-near-me/static/css/main.8b499583.chunk.css",
+    "main.js": "/wendisha/florist-near-me/static/js/main.4583c439.chunk.js",
+    "main.js.map": "/wendisha/florist-near-me/static/js/main.4583c439.chunk.js.map",
+    "runtime-main.js": "/wendisha/florist-near-me/static/js/runtime-main.c0c528a2.js",
+    "runtime-main.js.map": "/wendisha/florist-near-me/static/js/runtime-main.c0c528a2.js.map",
+    "static/css/2.b0bb7f2c.chunk.css": "/wendisha/florist-near-me/static/css/2.b0bb7f2c.chunk.css",
+    "static/js/2.7a21bec5.chunk.js": "/wendisha/florist-near-me/static/js/2.7a21bec5.chunk.js",
+    "static/js/2.7a21bec5.chunk.js.map": "/wendisha/florist-near-me/static/js/2.7a21bec5.chunk.js.map",
+    "index.html": "/wendisha/florist-near-me/index.html",
+    "precache-manifest.0a12e19a95d5a6b59e9744f231d41c40.js": "/wendisha/florist-near-me/precache-manifest.0a12e19a95d5a6b59e9744f231d41c40.js",
+    "service-worker.js": "/wendisha/florist-near-me/service-worker.js",
+    "static/css/2.b0bb7f2c.chunk.css.map": "/wendisha/florist-near-me/static/css/2.b0bb7f2c.chunk.css.map",
+    "static/css/main.8b499583.chunk.css.map": "/wendisha/florist-near-me/static/css/main.8b499583.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c0c528a2.js",
+    "static/css/2.b0bb7f2c.chunk.css",
+    "static/js/2.7a21bec5.chunk.js",
+    "static/css/main.8b499583.chunk.css",
+    "static/js/main.4583c439.chunk.js"
+  ]
+}
