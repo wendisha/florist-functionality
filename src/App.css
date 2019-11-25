@@ -93,7 +93,8 @@ button.btn.btn-light.btn-arrow {
 }
 
 .card-title.h5 {
-  height: 2.4rem;
+  height: 2.6rem;
+  font-weight: bold;
 }
 
 .browse {
