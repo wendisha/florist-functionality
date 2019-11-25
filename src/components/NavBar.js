@@ -18,6 +18,7 @@ const NavBar = () => {
                     <span className="login">
                         <Nav.Link className="nav-link text-center" style={{fontWeight: 'bold'}} href="https://www.lantern.co/login" >Log In</Nav.Link>
                         <Button variant="warning" className='btn-lg round' href="https://www.lantern.co/register/stepone">Create Account</Button>
+                        <Nav.Link className="nav-link text-center" href="https://www.lantern.co/search" ><img class="arrow" src='https://i.imgur.com/VFYGMMX.png'/></Nav.Link>
                     </span>
                 </Nav>
             </div>
