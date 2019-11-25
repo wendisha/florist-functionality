@@ -8,12 +8,15 @@ class FloristListContainer extends Component {
         floristsList : []
     }
 
+    //Make fetching function available as props
     componentDidMount() {
         this.fetchYelpApi()
     }
 
+    //Async funct to fetch data from Yelp Fusion
     fetchYelpApi = (...args) => {
         let zipcode, latitude, longitude, url;
+        //Conditional to check if user is browsing through current location or zipcode
         if (args.length > 2) {
           [latitude, longitude] = args;
           url = `https://api.yelp.com/v3/businesses/search?term=florist&latitude=${latitude}&longitude=${longitude}`
@@ -38,9 +41,7 @@ class FloristListContainer extends Component {
                 florists.push(florist)
             ))
             this.setState({
-
                 floristsList : florists
-                
             })
         })
     }
