@@ -1,46 +1,16 @@
 import React, { Component } from 'react';
 import BrowseFloristsForm from '../components/BrowseFloristsForm'
 import ListFlorists from '../components/ListFlorists'
-import Geolocate from '../components/Geolocate'
 import NavBar from '../components/NavBar'
-
-// const initialState = {
-//     floristsList : []
-// };
 
 class FloristListContainer extends Component {
     state = {
         floristsList : []
     }
 
-    // constructor(props) {
-    //     super(props)
-    //     this.state = initialState;
-    // }
-    // reset() {
-    //     this.setState({
-    //             floristsList : []
-    //         });
-    // }
-
-
-
     componentDidMount() {
         this.fetchYelpApi()
     }
-
-    // componentWillUnmount() {
-    //     clearInterval(this.state);
-    //     // this.setState({
-    //     //     floristsList : []
-    //     // })
-    //   }
-
-    // shouldComponentUpdate() {
-    //     this.setState({
-    //         floristsList: []
-    //     });
-    // }
 
     fetchYelpApi = (...args) => {
         let zipcode, latitude, longitude, url;
@@ -72,7 +42,6 @@ class FloristListContainer extends Component {
                 floristsList : florists
                 
             })
-            // this.reset()
         })
     }
 
@@ -80,7 +49,6 @@ class FloristListContainer extends Component {
         return ( 
             <div>
                 <NavBar/>
-                <Geolocate fetchYelpApi={this.fetchYelpApi}/>
                 <BrowseFloristsForm fetchYelpApi={this.fetchYelpApi}/>
                 <ListFlorists floristsList={this.state.floristsList}/>
             </div>
