@@ -45,6 +45,7 @@ a.nav-link.text-center.nav-link:hover {
 
 a.nav-link.text-center.nav-link {
   color: #000;
+  padding-right: 50px;
 }
 
 .btn.round {
@@ -56,4 +57,26 @@ a.nav-link.text-center.nav-link {
 .btn.round:hover {
   background-color: #fff;
   border: 0px;
+}
+
+input.border.border-dark {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+button.btn.btn-light.btn-arrow {
+  padding: 0.15rem 0.15rem 0.25rem;
+}
+
+.arrow {
+  width: 30px;
+}
+
+.navigation, .login {
+  display: flex;
+  align-items: center;
+}
+
+.card-title.h5 {
+  height: 2.8rem;
 }
