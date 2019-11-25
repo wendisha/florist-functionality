@@ -2,7 +2,7 @@
   "name": "florist-near-me",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/wendisha/florist-near-me",
+  "homepage": ".",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "gh-pages": "^2.1.1",
