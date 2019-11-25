@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 const FloristCard = (props) => {
   // console.log(props.florist.image_url);
   return ( 
-    <CardDeck className="col-md-6 col-lg-3" style={{ margin: "2em auto" }}>
+    <CardDeck className="col-md-6 col-lg-4" style={{ margin: "2em auto" }}>
       <Card>
       {/* <div key={props.florist.id}> */}
       
