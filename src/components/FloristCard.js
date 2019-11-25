@@ -23,8 +23,8 @@ const FloristCard = (props) => {
           {/* <Card.Link target="_blank" href={props.florist.url}>Learn more about this florist!</Card.Link>
            */}
 
-          <Button className="align-self-end btn-lg btn-block" variant="light" style={{ margin: "auto" }}>
-            <Card.Link target="_blank" href={props.florist.url}>
+          <Button className="align-self-end btn-md round btn-block" variant="warning" style={{ margin: "auto" }}>
+            <Card.Link target="_blank" href={props.florist.url} style={{ color: '#000' }}>
               Learn more...
             </Card.Link>
           </Button>
