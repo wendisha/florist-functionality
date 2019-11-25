@@ -5,8 +5,9 @@ import Button from 'react-bootstrap/Button';
 class Geolocate extends React.Component {
     //Handle click on the Geolocation icon to fetch from external API
     handleClick = (event) => {
+        console.log(this.props.coords.latitude)
         event.preventDefault()
-        this.props.fetchYelpApi(this.props.coords.latitude, this.props.coords.longitude)
+        this.props.fetchGeoYelpApi(this.props.coords.latitude, this.props.coords.longitude)
     }
 
     render() {
@@ -27,4 +28,6 @@ export default geolocated({
         enableHighAccuracy: false,
     },
     userDecisionTimeout: 5000,
+    geolocationProvider: navigator.geolocation,
+    watchPosition: true
 })(Geolocate);

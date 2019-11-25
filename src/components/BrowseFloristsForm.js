@@ -7,7 +7,9 @@ import Geolocate from '../components/Geolocate'
 class BrowseFloristsForm extends React.Component {
     //Set initialState
     state = {
-        zipcode: ''
+        zipcode: '',
+        latitude: '',
+        longitude: ''
     }
 
     //Handle form submision by fetching from extenal API
@@ -31,7 +33,7 @@ class BrowseFloristsForm extends React.Component {
                 <Form onSubmit={this.handleSubmit}>
                     <Form.Group>                       
                         <input type="text" className="border border-dark" placeholder="Browse by zipcode" name="zipcode" onChange={this.onChange} required />        
-                        <Geolocate fetchYelpApi={this.props.fetchYelpApi}/>
+                        <Geolocate latitude={this.state.latitude} longitude={this.state.longitude} fetchGeoYelpApi={this.props.fetchGeoYelpApi}/>
                     </Form.Group>  
                     <Button variant="warning" className='btn-md round browse' type="submit" value="Browse">Browse</Button>             
                 </Form>
