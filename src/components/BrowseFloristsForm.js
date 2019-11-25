@@ -24,7 +24,10 @@ class BrowseFloristsForm extends React.Component {
 
     render () {
         return (
-            <Container style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <>
+            <Container style={{ paddingTop: '30px'}}><h1>Find a florist near you.</h1></Container>
+            <Container style={{ display: "flex", justifyContent: "left", alignItems: "center" }}>
+                
                 <Form onSubmit={this.handleSubmit}>
                     <Form.Group>                       
                         <input type="text" className="border border-dark" placeholder="Browse by zipcode" name="zipcode" onChange={this.onChange} />        
@@ -33,6 +36,7 @@ class BrowseFloristsForm extends React.Component {
                     <Button variant="warning" className='btn-md round' type="submit" value="Browse">Browse</Button>             
                 </Form>
             </Container>
+            </>
         )   
     }   
 }
