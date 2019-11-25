@@ -3,7 +3,7 @@ import { Navbar, Nav, Container, Button } from 'react-bootstrap'
 
 const NavBar = () => {
     return(
-        <Navbar bg="light" variant="dark" style={{ height: '8rem', paddingRight: '15px' }}>
+        <Navbar variant="dark" style={{ height: '8rem', paddingRight: '15px', backgroundColor: 'white' }}>
             <div className="container">
                 <Navbar.Brand href="https://www.lantern.co/">
                     <img src="https://mvp-lantern-staging.s3.us-east-2.amazonaws.com/LOGO_Black.png"
