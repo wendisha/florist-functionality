@@ -10,11 +10,9 @@ class BrowseFloristsForm extends React.Component {
     }
 
     handleSubmit = event => {
+        console.log(this.state.zipcode)
         event.preventDefault()
         this.props.fetchYelpApi(this.state.zipcode)  
-        this.setState({
-            zipcode: ''
-        })
     }
 
     //Update state as user enters zipcode in the form:
@@ -29,10 +27,10 @@ class BrowseFloristsForm extends React.Component {
             <Container style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                 <Form onSubmit={this.handleSubmit}>
                     <Form.Group>                       
-                        <input type="text" className="border border-dark" placeholder="Browse by zipcode" />        
+                        <input type="text" className="border border-dark" placeholder="Browse by zipcode" name="zipcode" onChange={this.onChange} />        
                         <Geolocate fetchYelpApi={this.props.fetchYelpApi}/>
                     </Form.Group>  
-                    <Button variant="warning" className='btn-md round' type="submit">Browse</Button>             
+                    <Button variant="warning" className='btn-md round' type="submit" value="Browse">Browse</Button>             
                 </Form>
             </Container>
         )   
