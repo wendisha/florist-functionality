@@ -2,7 +2,7 @@ import React from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Image from 'react-bootstrap/Image';
+import Geolocate from '../components/Geolocate'
 
 class BrowseFloristsForm extends React.Component {
     state = {
@@ -28,10 +28,11 @@ class BrowseFloristsForm extends React.Component {
         return (
             <Container style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                 <Form onSubmit={this.handleSubmit}>
-                    <Form.Group>
-                        <Form.Control type="text" className="border border-dark" placeholder="Browse by zipcode" /><br></br>
-                        <Button variant="warning" className='btn-md round' type="submit">Browse</Button>
-                    </Form.Group>               
+                    <Form.Group>                       
+                        <input type="text" className="border border-dark" placeholder="Browse by zipcode" />        
+                        <Geolocate />
+                    </Form.Group>  
+                    <Button variant="warning" className='btn-md round' type="submit">Browse</Button>             
                 </Form>
             </Container>
         )   
