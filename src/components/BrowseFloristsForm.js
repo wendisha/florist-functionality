@@ -5,12 +5,13 @@ import Container from 'react-bootstrap/Container';
 import Geolocate from '../components/Geolocate'
 
 class BrowseFloristsForm extends React.Component {
+    //Set initialState
     state = {
         zipcode: ''
     }
 
+    //Handle form submision by fetching from extenal API
     handleSubmit = event => {
-        console.log(this.state.zipcode)
         event.preventDefault()
         this.props.fetchYelpApi(this.state.zipcode)  
     }
@@ -27,7 +28,6 @@ class BrowseFloristsForm extends React.Component {
             <>
             <Container style={{ paddingTop: '30px'}}><h1>Find a florist near you.</h1></Container>
             <Container style={{ display: "flex", justifyContent: "left", alignItems: "center" }}>
-                
                 <Form onSubmit={this.handleSubmit}>
                     <Form.Group>                       
                         <input type="text" className="border border-dark" placeholder="Browse by zipcode" name="zipcode" onChange={this.onChange} required />        
